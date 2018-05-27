@@ -11,8 +11,10 @@ phases:
       - echo Build completed on `date`
       - ls -al build/libs
       - ls -al build/distributions
+      - aws cloudformation package --template-file template.yml --s3-bucket rroques-artefacts --output-template-file template-packaged.yml
 artifacts:
   files:
     - build/distributions/samy.zip
     - appspec.yml
+    - template-packaged.yml
   discard-paths: yes

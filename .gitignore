@@ -4,3 +4,4 @@ bin
 build
 *.iml
 .idea
+template-packaged.yml
