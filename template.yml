@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  SamyFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: nz.co.rroques.samy.Handler
+      CodeUri: ./build/distributions/samy.zip
+      Runtime: java8
+      MemorySize: 128
+      Timeout: 3
